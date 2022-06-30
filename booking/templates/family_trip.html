@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'navbar.html' %}
+{% block content %}
+<h3 align="center">Family trip </h3>
+<div class ="container-fluid">
+    <!-- 1st row start -->
+    <div class="row">
+        <!-- first column -->
+        <div class="col-sm-4">
+            <div style="white-space: pre;color:white;background-color:black;">
+                <font size="6" > &nbsp;A2 - ANDAMAN</font>
+                <font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5 Days 4 Hotel Nights</font>
+             </div>
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Explore</b>
+               Tropical Spice Plantation which is untouched by pollution and makes you feel a part of nature and visit Old Goa Churchonly only in 29,990 Rs <br>
+
+              <div class="row">
+                   <div class="col-sm-5">
+                       <button onclick="window.location.href='/andman2'">See details of trip</button>
+                   </div>
+                   <div class="col-sm-7">
+                       {% if s_user %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" value="A2 - ANDAMAN" size="6px" hidden>
+                            <input type="submit" value="book this trip" name="andman2">
+                        </form>
+                       {% else %}
+                         <button onclick="window.location.href='/log'">want to book this trip</button>
+                       {% endif %}
+
+                   </div>
+              </div>
+        </div>
+        <!-- secound column -->
+        <div class="col-sm-8">
+            <img src="static/image/andaman2.jpg" class="img-fluid" style="height:350px;width:1400px">
+        </div>
+    </div>
+    <!-- 1st row end -->
+    <br><br>
+    <!-- 2nd row start -->
+    <div class="row">
+        <!-- first column -->
+        <div class="col-sm-8">
+            <img src="static/image/kerla banner2.jpg" class="img-fluid" style="height:300px;">
+        </div>
+
+        <!-- secound column -->
+        <div class="col-sm-4">
+            <div style="white-space: pre;color:white;background-color:black;">
+                <font size="5" >k2 - KERALA KANYAKUMARI</font>
+                <font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 Days 6 Hotel Nights</font>
+             </div>
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Explore</b>
+               Enjoy speed boat ride at Mattupetty Dam. View Tea Garden, visit Echo Point and the Eravikulam (Rajamalai) National Park (subject to operation) OR Tata Tea Museum
+               and explore much more only in 26,990 Rs <br><br>
+               <div class="row">
+                   <div class="col-sm-5">
+                       <button onclick="window.location.href='/kerla2'">See details of trip</button>
+                   </div>
+                   <div class="col-sm-7">
+                       {% if s_user %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" value="k1 - MUNNAR PERIYAR ALLEPPY" size="6px" hidden>
+                            <input type="submit" onclick="window.location.href='/booking'" value="book this trip" name="kerla2">
+                        </form>
+                       {% else %}
+                         <button onclick="window.location.href='/log'">want to book this trip</button>
+                       {% endif %}
+
+                   </div>
+              </div>
+        </div>
+
+    </div>
+    <!-- 2nd row end -->
+    <br><br>
+    <!-- 3rd row start -->
+    <div class="row">
+        <!-- first column -->
+        <div class="col-sm-4">
+            <div style="white-space: pre;color:white;background-color:black;">
+                <font size="5" >g2 - GOA WITH LAKSHADWEEP</font>
+                <font size="4">6 Days 5 Hotel Nights</font>
+             </div>
+
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Explore</b>
+               Lakshadweep - a paradise of sun-kissed beaches, translucent blue waters and luscious landscape. Visit Kadmat Island also known as Cardamom Island,
+         famous for marine turtles and coral reefs and much more only in 20,000 Rs <br>
+                  <div class="row">
+                       <div class="col-sm-5">
+                            <button onclick="window.location.href='/goa2'">See details of trip</button>
+                       </div>
+                       <div class="col-sm-7">
+                            {% if s_user %}
+                                <form method="post">
+                                    {% csrf_token %}
+                                   <input type="text" value="g1 - GOA - MY FAIR LADY" size="6px" hidden>
+                                   <input type="submit" onclick="window.location.href='/booking'" value="book this trip" name="goa2">
+                                </form>
+                            {% else %}
+                                   <button onclick="window.location.href='/log'">want to book this trip</button>
+                            {% endif %}
+
+                   </div>
+                  </div>
+        </div>
+        <!-- secound column -->
+        <div class="col-sm-8">
+            <img src="static/image/goa2.jpg" class="img-fluid">
+        </div>
+    </div>
+    <!-- 3rd row end -->
+
+
+    <br><br>
+</div>
+
+{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>

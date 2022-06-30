@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'navbar.html' %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <table>
+        <tr><td>Name</td><td><input type="text" value="{{s_data.name}}" name="fname"></td></tr>
+        <tr><td>Address</td><td><textarea rows="5" name="add">{{s_data.address}}</textarea></td></tr>
+        <tr><td>Mobile</td><td><input type="text" value="{{s_data.mobile}}" name="no"></td></tr>
+        <tr><td>Mail</td><td><input type="text" value="{{s_data.mail_id}}" name="mail"></td></tr>
+        <tr><td>Aadhar no</td><td><input type="text" value="{{s_data.aadhar_no}}" name="aadhar"></td></tr>
+        <tr><td>Username</td><td><input type="text" value="{{s_data.username}}" name="user"></td><td>{{msg}}</td></tr>
+        <tr><td>Password</td><td><input type="text" value="{{s_data.password}}" name="pass"></td></tr>
+        <tr><td><input type="submit"></td></tr>
+    </table>
+</form>
+{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+    {% extends 'admin/a_header.html' %}
+{% block content %}
+<div class="container">
+  <br>
+  <h3 align="center">Feedback data</h3>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Mail</th>
+        <th scope="col">Query</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for feedback in feed_data %}
+      <tr>
+        <td>{{ feedback.f_id}}</td>
+        <td>{{ feedback.name}}</td>
+        <td>{{ feedback.mail_id }}</td>
+        <td>{{ feedback.query}}</td>
+        <td><form method = post>
+            {% csrf_token %}
+            <input type = "text" value="{{ feedback.f_id}}" name="fe_id" hidden>
+            <input type="submit" value="delete" name="feed">
+        </form></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
+</body>
+</html>

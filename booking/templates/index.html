@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'navbar.html' %}
+{% block content %}
+<h1 align="center">welcome to let's travel </h1>
+<div class="container-fluid">
+<div class="row">
+    <div class ="col-sm-4"><a href ="/family"><img src="static/image/family trip.jpg" class="img-fluid" alt="Responsive image"><p align="center">family trip</p></a></div>
+    <div class ="col-sm-4"><a href="/corporate"> <img src="static/image/corporate.jpg" class="img-fluid" alt="Responsive image"><p align="center">corporation trip</p></a></div>
+    <div class ="col-sm-4"><a href ="/break"><img src="static/image/break1.jpg" class="img-fluid" alt="Responsive image"><p align="center">little break</p></a></div>
+</div>
+<div class="row">
+<div class ="col-sm-3"><a href="/booking"><img src="static/image/group-tour-kerala.jpg" class="img-fluid" alt="Responsive image"><p align="center"> kerla </p></a></div>
+    <div class ="col-sm-3"><a href="/karnatak1"><img src="static/image/gujrat.jpg" class="img-fluid" alt="Responsive image"><p align="center">karnatak</p></a></div>
+    <div class ="col-sm-3"><a href="/binfo"><img src="static/image/andaman2.jpg" class="img-fluid" alt="Responsive image"><p align="center">andaman</p></a></div>
+    <div class ="col-sm-3"><a href="/goa2"><img src="static/image/goa.jpg" class="img-fluid" alt="Responsive image"><p align="center">goa</p></a></div>
+</div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}
+
+</body>
+</html>

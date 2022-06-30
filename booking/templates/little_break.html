@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'navbar.html' %}
+{% block content %}
+<h3 align="center">Little break </h3>
+<div class ="container-fluid">
+    <!-- 1st row start -->
+    <div class="row">
+        <!-- first column -->
+        <div class="col-sm-4">
+            <div style="white-space: pre;color:white;background-color:black;">
+                <font size="5"  >kar1 - HAMPI BADAMI</font>
+                <font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7 Days 6 Hotel Nights</font>
+             </div>
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Explore</b>
+               Shri Shanta Durga Temple dedicated to Goddess of peace, Mangeshi Temple. Later explore
+               Tropical Spice Plantation which is untouched by polution and makes you feel a part of nature and much more only in 25,990 Rs <br>
+
+              <div class="row">
+                   <div class="col-sm-5">
+                       <button onclick="window.location.href='/karnatak1'">See details of trip</button>
+                   </div>
+                   <div class="col-sm-7">
+                       {% if s_user %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" value="kar1 - HAMPI BADAMI" size="6px" hidden>
+                            <input type="submit" value="book this trip" name="kar1">
+                        </form>
+                       {% else %}
+                         <button onclick="window.location.href='/log'">want to book this trip</button>
+                       {% endif %}
+
+                   </div>
+              </div>
+        </div>
+        <!-- secound column -->
+        <div class="col-sm-8">
+            <img src="static/image/karnataka1.jpg" class="img-fluid" style="height:300px;">
+        </div>
+    </div>
+    <!-- 1st row end -->
+    <br><br>
+    <!-- 2nd row start -->
+    <div class="row">
+        <!-- first column -->
+        <div class="col-sm-8">
+            <img src="static/image/kerla banner3.jpg" class="img-fluid" style="height:300px;">
+        </div>
+
+        <!-- secound column -->
+        <div class="col-sm-4">
+            <div style="white-space: pre;color:white;background-color:black;">
+                <font size="4" >k3 - KERALA KANYAKUMARI MADURAI</font>
+                <font size="4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 Days 9 Hotel Nights</font>
+             </div>
+              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Explore</b>
+               beautiful Padmanabhaswamy temple – dedicated to Lord Vishnu is the richest temple in the world and renowned for its beauty and grandeur.
+               and explore much more only in 27,990 Rs <br><br>
+               <div class="row">
+                   <div class="col-sm-5">
+                       <button onclick="window.location.href='/kerla3'">See details of trip</button>
+                   </div>
+                   <div class="col-sm-7">
+                       {% if s_user %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="text" value="k3 - KERALA KANYAKUMARI MADURAI" size="6px" hidden>
+                            <input type="submit" onclick="window.location.href='/booking'" value="book this trip" name="kerla3">
+                        </form>
+                       {% else %}
+                         <button onclick="window.location.href='/log'">want to book this trip</button>
+                       {% endif %}
+
+                   </div>
+              </div>
+        </div>
+
+    </div>
+    <!-- 2nd row end -->
+
+    <br><br>
+</div>
+
+{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>

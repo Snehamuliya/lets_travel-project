@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'navbar.html' %}
+{% block content %}
+<h1 align ="center">login</h1>
+<div class="col-lg-5 mx-auto border rounded pt-4">
+    <table>
+<form method="post">
+    {% csrf_token %}
+
+    <tr><td>  username =</td><td> <input type = "text" name="user"></td></tr>
+    <tr><td>  password = </td><td><input type = "text" name="pass"></td></tr>
+    <tr><td><input type = "submit"></td></tr>
+
+</form>
+        </table>
+</div>
+{{msg}}
+{{user_number}}
+{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>
+

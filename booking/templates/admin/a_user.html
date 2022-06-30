@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+    {% extends 'admin/a_header.html' %}
+{% block content %}
+<div class="container">
+    <br>
+    <h3 align="center">User data</h3>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Mail id</th>
+        <th scope="col">Aadhar-no</th>
+        <th scope="col">Username</th>
+        <th scope="col">Password</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for u_data in user_data %}
+      <tr>
+     
+        <td>{{ u_data.name}}</td>
+        <td>{{ u_data.address}}</td>
+        <td>{{ u_data.mobile }}</td>
+        <td>{{ u_data.mail_id}}</td>
+        <td>{{ u_data.aadhar_no}}</td>
+        <td>{{ u_data.username }}</td>
+        <td>{{ u_data.password}}</td>
+        <td><form method = post>
+            {% csrf_token %}
+            <input type = "text" value="{{ u_data.username}}" name="userdata" hidden>
+            <input type="submit" value="delete" name="user">
+        </form></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+{% extends 'navbar.html' %}
+{% block content %}
+<br>
+<div class="col-lg-5 mx-auto border rounded pt-4">
+<h1 align="center">Book trip</h1>
+    <br>
+<table align="center">
+<form method="post">
+    {% csrf_token %}
+    <tr><td> Name  </td><td><input type = "text" name="fname"></td></tr>
+    <tr><td> Address </td><td> <textarea rows="4" name="add"></textarea></td></tr>
+    <tr><td> Phone </td><td> <input type = "number" name="num"></td></tr>
+    <tr><td> Email </td><td> <input type = "text" name="mail"></td></tr>
+    <tr><td> Aadharcard </td><td> <input type = "text" name="adhar"></td></tr>
+    <tr><td> Username </td><td> <input type = "text" name="user" value="{{s_user}}" readonly></td></tr>
+    <tr><td> Destiny</td><td> <input type = "text" name="trip" value="{{trip}}"></td></tr>
+    <tr><td> Price</td><td> <input type = "text" name="t_price" value="{{price}}"></td><td>(per person)</td></tr>
+    <tr><td> Want to <br> ask question </td><td>  <textarea rows="4" name="ques"></textarea></td></tr>
+    <tr><td> No of people<br> with you </td><td> <input type = "number" name="peo_no" > </td></tr>
+    <tr><td><input type = "submit" name = "book" ></td></tr>
+
+</form>
+</table>
+</div>
+{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update_account</title>
+</head>
+<body>
+{% extends 'navbar.html' %}
+{% block content %}
+<h1>Update Account</h1>
+<table><tr><td>{{s_data.name}}</td></tr>
+<tr><td>{{s_data.address}} </td></tr>
+<tr><td>{{s_data.mobile}}</td></tr>
+<tr><td>{{s_data.mail_id}}</td></tr>
+<tr><td>{{s_data.aadhar_no}}</td></tr>
+<tr><td>{{s_data.username}}</td></tr>
+ <tr><td>{{s_data.password}}</td></tr></table>
+
+
+{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% extends 'navbar.html' %}
+{% block content %}
+
+<h2 align="center">profile</h2>
+<!-- profile start -->
+<center>
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="static/image/user_profile.png" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+          <p class="card-text">{{s_data.name}}<br>{{s_data.address}}<br>{{s_data.mobile}}<br>{{s_data.mail_id}}<br>{{s_data.aadhar_no}}<br>{{s_data.username}}<br>{{s_data.password}}</bt></p>
+
+      </div>
+    </div>
+  </div>
+</div>
+</center>
+<!-- profile end -->
+
+{% include 'footer.html' %}
+{% endblock %}
+</body>
+</html>
